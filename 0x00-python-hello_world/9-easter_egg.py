@@ -3,4 +3,4 @@ import this
 print("", end=" ")
 print("", end=" ")
 print("", end=" ")
-pnal = ""
+print("\n")
