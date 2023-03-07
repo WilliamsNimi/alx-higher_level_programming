@@ -7,6 +7,3 @@ def print_last_digit(number):
     else:
         mod = number % 10
     return mod
-print(print_last_digit(0))
-print(print_last_digit(-1024))
-print(print_last_digit(98))
