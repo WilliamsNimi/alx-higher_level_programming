@@ -7,5 +7,5 @@ while start < 123:
     elif start == 113:
         starter = starter + 1
     else:
-        print(f"{s}".format(chr(start)), end="")
+        print("{}".format(chr(start)), end="")
     start = start + 1
