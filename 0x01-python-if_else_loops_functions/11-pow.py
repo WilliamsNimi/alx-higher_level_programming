@@ -4,4 +4,3 @@ def pow(a, b):
     for i in range(b-1):
         power = power * a
     return power
-print(pow(2,5))
