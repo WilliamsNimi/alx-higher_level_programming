@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from hidden_d import my_secret_santa, print_hidden, print_school
+from hidden_4 import my_secret_santa, print_hidden, print_school
 
 
 def unhide():
