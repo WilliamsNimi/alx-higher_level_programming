@@ -6,14 +6,10 @@ from calculator_1.py import div
 def calculate():
     a = 10
     b = 5
-    c = add(a, b)
-    d = sub(a, b)
-    e = mul(a, b)
-    f = div(a, b)
-    print("{} + {} = {}".format(a, b, c))
-    print("{} - {} = {}".format(a, b, d))
-    print("{} * {} = {}".format(a, b, e))
-    print("{} / {} = {}".format(a, b, f))
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
 
 if __name__ == "__main__":
     calculate()
