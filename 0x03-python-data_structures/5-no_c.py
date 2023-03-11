@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+
+def no_c(my_string):
+    my_list = []
+    for chars in my_string:
+        if chars != 'c' and chars != 'C':
+            my_list.append(chars)
+    return "".join(my_list)
