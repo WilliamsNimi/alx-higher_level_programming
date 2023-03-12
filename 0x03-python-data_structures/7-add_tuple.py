@@ -6,6 +6,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
     b = 0
     ci = 0
     d = 0
+    if len(tuple_a) == 1 and len(tuple_b) == 1:
+        return ((tuple_a[0] + tuple_b[0]), 0)
     if len(tuple_a) == 1 and len(tuple_b) >= 2:
         ai = tuple_a[0]
         ci = tuple_b[0]
