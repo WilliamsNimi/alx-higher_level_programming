@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-from hidden_4 import my_secret_santa, print_hidden, print_school
+import hidden_4
 
 
 def unhide():
-    print(my_secret_santa)
-    print(print_hidden)
-    print(print_school)
-
+    for values in dir(hidden_4):
+        if values[0] != "_" and values[1] != "_":
+            print(values)
 
 if __name__ == "__main__":
     unhide()
