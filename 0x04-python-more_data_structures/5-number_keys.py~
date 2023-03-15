@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+
+
+def number_keys(a_dictionary):
+    return len(list(a_dictionary.keys()))
+
+a_dictionary = {'language': "C", 'number': 13, 'track': "low level"}
+print(number_keys(a_dictionary))
