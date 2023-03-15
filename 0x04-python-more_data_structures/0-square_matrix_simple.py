@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def my_func(matrix):
+def square_matrix_simple(matrix=[]):
     full_list = []
     for i in matrix:
         lists = []
@@ -9,7 +9,3 @@ def my_func(matrix):
             lists.append(j * j)
         full_list.append(lists)
     return full_list
-
-
-def square_matrix_simple(matrix=[]):
-    my_func(matrix)
