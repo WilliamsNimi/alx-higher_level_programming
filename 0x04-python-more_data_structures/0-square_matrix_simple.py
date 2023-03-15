@@ -8,7 +8,8 @@ def my_func(matrix):
         for j in i:
             lists.append(j * j)
         full_list.append(lists)
-    print(full_list)
+    return full_list
+
 
 def square_matrix_simple(matrix=[]):
     my_func(matrix)
