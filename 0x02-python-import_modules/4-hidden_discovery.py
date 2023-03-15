@@ -7,5 +7,6 @@ def unhide():
         if values[0] != "_" and values[1] != "_":
             print(values)
 
+
 if __name__ == "__main__":
     unhide()
