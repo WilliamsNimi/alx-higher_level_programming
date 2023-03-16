@@ -6,6 +6,8 @@ def roman_to_int(roman_string):
     sum_ = 0
     if roman_string is None or type(roman_string) != str:
         return 0
+    if reman_string not in new_dict:
+        return 0
     for i in range(0, len(roman_string)):
         if i > 0:
             if roman_string[i] == 'V' or roman_string[i] == 'X':
