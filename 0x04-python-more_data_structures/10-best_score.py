@@ -2,7 +2,7 @@
 
 
 def best_score(a_dictionary):
-    if a_dictionary is type(NoneType):
+    if not (a_dictionary):
         return None
     else:
         maxi = 0
