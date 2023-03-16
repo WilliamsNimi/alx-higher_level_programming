@@ -4,7 +4,7 @@
 def roman_to_int(roman_string):
     new_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500}
     sum_ = 0
-    if roman_string is None:
+    if roman_string is None and !isinstance(roman_string, str):
         return 0
     for i in range(0, len(roman_string)):
         if i > 0:
