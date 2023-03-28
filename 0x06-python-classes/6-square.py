@@ -10,7 +10,7 @@ class Square:
                _Square__size: This is the size of the square
                _position: this is a position attribute required for print
     """
-    _Square__size = None
+    size = None
     _position = None
 
     def __init__(self, size=0, position=(0, 0)):
@@ -27,7 +27,7 @@ class Square:
         """
         if type(size) == int:
             if size >= 0:
-                self._Square__size = size
+                self.size = size
                 self._position = position
             else:
                 raise ValueError("size must be >=0")
@@ -41,7 +41,7 @@ class Square:
         Returns:
                returns the area of the square
         """
-        return self._Square__size * self._Square__size
+        return self.size * self.size
 
     def size(self):
         """ This is the size getter method
@@ -50,7 +50,7 @@ class Square:
         Returns:
                returns the size of the square
         """
-        return self._Square__size
+        return self.size
 
     def size(self, value):
         """ This is the size setter method
@@ -65,7 +65,7 @@ class Square:
         """
         if type(value) == int:
             if value >= 0:
-                self._Square__size = value
+                self.size = value
             else:
                 raise ValueError("size must be >=0")
         else:
@@ -92,7 +92,10 @@ class Square:
               TypeError: Checks the type of the size
         """
         if type(value[0]) == int and type(value[1]) == int:
-            self._position = value
+            if value[0] < 0 or value[1] < 0:
+                self._position = value
+            else:
+                raise Exception("position must be a tuple of 2 positive integers")
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -103,13 +106,13 @@ class Square:
         Returns:
                returns nothing
         """
-        if self._Square__size == 0:
+        if self.size == 0:
             print("")
         else:
-            for i in range(self._Square__size):
+            for i in range(self.size):
                 for i in range(self._position[0]):
                     if self._position[1] <= 0:
                         print(" ", end="")
-                for i in range(self._Square__size):
+                for i in range(self.size):
                     print("#", end="")
                 print("")
