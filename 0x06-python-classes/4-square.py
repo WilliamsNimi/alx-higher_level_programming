@@ -9,7 +9,7 @@ class Square:
     Attributes:
               _Square__size: This is the size of the square
     """
-    _Square__size = None
+    __Square__size = None
 
     def __init__(self, size=0):
         """ This is the __init__ method
@@ -24,7 +24,7 @@ class Square:
         """
         if type(size) == int:
             if size >= 0:
-                self._Square__size = size
+                self.__Square__size = size
             else:
                 raise ValueError("size must be >=0")
         else:
@@ -37,7 +37,7 @@ class Square:
         Returns:
                returns the area of the sqaure
         """
-        return self._Square__size * self._Square__size
+        return self.__Square__size * self.__Square__size
 
     def size(self):
         """ This is the size method
@@ -46,7 +46,7 @@ class Square:
         Returns:
                returns the size of the square
         """
-        return self._Square__size
+        return self.__Square__size
 
     def size(self, value):
         """ This is the size setter method
@@ -61,7 +61,7 @@ class Square:
         """
         if type(value) == int:
             if value >= 0:
-                self._Square__size = value
+                self.__Square__size = value
             else:
                 raise ValueError("size must be >=0")
         else:
