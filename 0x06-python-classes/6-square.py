@@ -25,19 +25,14 @@ class Square:
               ValueError: Checks size of the size attribute
               TypeError: Checks the type of the size attribute
         """
-        try:
-            if type(size) == int:
-                if size >= 0:
-                    self._Square__size = size
-                    self._position = position
-                else:
-                    raise ValueError("size must be >=0")
+        if type(size) == int:
+            if size >= 0:
+                self._Square__size = size
+                self._position = position
             else:
-                raise TypeError("size must be an integer")
-        except ValueError as er:
-            print(er)
-        except TypeError as err:
-            print(err)
+                raise ValueError("size must be >=0")
+        else:
+            raise TypeError("size must be an integer")
 
     def area(self):
         """ This is the area method
@@ -68,18 +63,13 @@ class Square:
               ValueError: Checks the value of the size is greater than 0
               TypeError: Checks the type of the size
         """
-        try:
-            if type(value) == int:
-                if value >= 0:
-                    self._Square__size = value
-                else:
-                    raise ValueError("size must be >=0")
+        if type(value) == int:
+            if value >= 0:
+                self._Square__size = value
             else:
-                raise TypeError("size must be an integer")
-        except ValueError as er:
-            print(er)
-        except TypeError as err:
-            print(err)
+                raise ValueError("size must be >=0")
+        else:
+            raise TypeError("size must be an integer")
 
     def position(self):
         """ This is the position getter method
@@ -101,15 +91,10 @@ class Square:
               ValueError: Checks the value of the size is greater than 0
               TypeError: Checks the type of the size
         """
-        try:
-            if type(value[0]) == int and type(value[1]) == int:
-                self._position = value
-            else:
-                raise TypeError("position must be a tuple of 2 positive integers")
-        except ValueError as er:
-            print(er)
-        except TypeError as err:
-            print(err)
+        if type(value[0]) == int and type(value[1]) == int:
+            self._position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         """ This is the my_print method

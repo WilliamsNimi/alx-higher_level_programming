@@ -22,15 +22,10 @@ class Square:
                ValueError: This checks the value of the size
                TypeError: This checks the type of the size
         """
-        try:
-            if type(size) == int:
-                if size >= 0:
-                    self._Square__size = size
-                else:
-                    raise ValueError("size must be >=0")
+        if type(size) == int:
+            if size >= 0:
+                self._Square__size = size
             else:
-                raise TypeError("size must be an integer")
-        except ValueError as er:
-            print(er)
-        except TypeError as err:
-            print(err)
+                raise ValueError("size must be >=0")
+        else:
+            raise TypeError("size must be an integer")
