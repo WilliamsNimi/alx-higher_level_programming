@@ -1,11 +1,30 @@
 #!/usr/bin/python3
 
+# -*- coding: utf-8 -*-
+""" This module is the implementation of a geometric square """
+
 
 class Square:
+    """ This is the Square class
+    Attributes:
+               _Square__size: This is the size of the square
+               _position: this is a position attribute required for print
+    """
     _Square__size = None
     _position = None
 
     def __init__(self, size=0, position=(0, 0)):
+        """ This is the __init__ method
+        Args:
+             self: This is the object instantiation
+             size: This is the size of the square
+             position: This is the print position of the square
+        Returns:
+                returns nothing
+        Raises:
+              ValueError: Checks size of the size attribute
+              TypeError: Checks the type of the size attribute
+        """
         try:
             if type(size) == int:
                 if size >= 0:
@@ -21,12 +40,34 @@ class Square:
             print(err)
 
     def area(self):
+        """ This is the area method
+        Args:
+             self: object instantiation
+        Returns:
+               returns the area of the square
+        """
         return self._Square__size * self._Square__size
 
     def size(self):
+        """ This is the size getter method
+        Args:
+            self: this is the object instantiation
+        Returns:
+               returns the size of the square
+        """
         return self._Square__size
 
     def size(self, value):
+        """ This is the size setter method
+        Args:
+            self: this is the object instantiation
+            value: this is the value to be made the size of the square
+        Returns:
+               returns nothing
+        Raises:
+              ValueError: Checks the value of the size is greater than 0
+              TypeError: Checks the type of the size
+        """
         try:
             if type(value) == int:
                 if value >= 0:
@@ -41,9 +82,25 @@ class Square:
             print(err)
 
     def position(self):
+        """ This is the position getter method
+        Args:
+            self: this is the object instantiation
+        Returns:
+               returns the position of the square
+        """
         return self._position
 
     def position(self, value):
+        """ This is the position setter method
+        Args:
+            self: this is the object instantiation
+            value: this is the value to be made the size of the square
+        Returns:
+               returns nothing
+        Raises:
+              ValueError: Checks the value of the size is greater than 0
+              TypeError: Checks the type of the size
+        """
         try:
             if type(value[0]) == int and type(value[1]) == int:
                 self._position = value
@@ -55,6 +112,12 @@ class Square:
             print(err)
 
     def my_print(self):
+        """ This is the my_print method
+        Args:
+             self: This is the object instatiation
+        Returns:
+               returns nothing
+        """
         if self._Square__size == 0:
             print("")
         else:
