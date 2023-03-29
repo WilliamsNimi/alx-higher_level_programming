@@ -7,11 +7,11 @@
 class Square:
     """ This is the Square class
     Attributes:
-               _Square__size: This is the size of the square
-               _position: this is a position attribute required for print
+               size: This is the size of the square
+               position: this is a position attribute required for print
     """
     size = None
-    _position = None
+    position = None
 
     def __init__(self, size=0, position=(0, 0)):
         """ This is the __init__ method
@@ -25,10 +25,16 @@ class Square:
               ValueError: Checks size of the size attribute
               TypeError: Checks the type of the size attribute
         """
+        if len(position) == 2 and position[0] >= 0 and position[1] >= 0:
+            if type(position[0]) == int and type(position[1]) == int:
+                self.position = position
+            else:
+                raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            raise IndexError("position must be a tuple of 2 positive integers")
         if type(size) == int:
             if size >= 0:
                 self.size = size
-                self._position = position
             else:
                 raise ValueError("size must be >=0")
         else:
@@ -78,7 +84,7 @@ class Square:
         Returns:
                returns the position of the square
         """
-        return self._position
+        return self.position
 
     def position(self, value):
         """ This is the position setter method
@@ -93,7 +99,7 @@ class Square:
         """
         if type(value[0]) == int and type(value[1]) == int:
             if value[0] < 0 or value[1] < 0:
-                self._position = value
+                self.position = value
             else:
                 raise Exception("position must be a tuple of 2 positive integers")
         else:
@@ -110,8 +116,8 @@ class Square:
             print("")
         else:
             for i in range(self.size):
-                for i in range(self._position[0]):
-                    if self._position[1] >= 0:
+                for i in range(self.position[0]):
+                    if self.position[1] >= 0 and self.position[0] > 0:
                         print(" ", end="")
                 for i in range(self.size):
                     print("#", end="")
