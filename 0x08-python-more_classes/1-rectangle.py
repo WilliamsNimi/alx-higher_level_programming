@@ -1,7 +1,13 @@
 #!/usr/bin/python3
 
+# -*- coding: utf-8 -*-
 """ This module contains the rectangle class """
 class Rectangle:
+    """ This is the rectangle class
+       Attributes:
+                 width: The width of the rectangle
+                 height: The height of the rectangle
+    """
     width = 0
     height = 0
 
