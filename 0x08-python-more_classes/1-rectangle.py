@@ -2,14 +2,16 @@
 
 # -*- coding: utf-8 -*-
 """ This module contains the rectangle class """
+
+
 class Rectangle:
     """ This is the rectangle class
        Attributes:
                  width: The width of the rectangle
                  height: The height of the rectangle
     """
-    width = 0
-    height = 0
+    _Rectangle__width = 0
+    _Rectangle__height = 0
 
     def __init__(self, width=0, height=0):
         """ This is the __init__ method
@@ -18,8 +20,16 @@ class Rectangle:
            Return:
                  returns nothing
         """
-        self.width = width
-        self.height = height
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        if type(height) != int:
+            raise TypeError("height must be an integer")
+        self._Rectangle__width = width
+        self._Rectangle__height = height
 
     def width(self):
         """ This is a getter method for the width of a rectangle
@@ -28,7 +38,7 @@ class Rectangle:
            Return:
                  returns width of the rectangle
         """
-        return self.width
+        return self._Rectangle__width
 
     def width(self, value):
         """ This is a setter method for the width of a rectangle
@@ -41,8 +51,8 @@ class Rectangle:
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >=0")
-        self.width = value
+            raise ValueError("width must be >= 0")
+        self._Rectangle__width = value
 
     def height(self):
         """ This is a getter method for the height of a rectangle
@@ -51,7 +61,7 @@ class Rectangle:
            Return:
                  returns heigth of the rectangle
         """
-        return self.height
+        return self._Rectangle__height
 
     def height(self, value):
         """ This is a setter method for the height of a rectangle
@@ -64,5 +74,5 @@ class Rectangle:
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be >=0")
-        self.height = value
+            raise ValueError("height must be >= 0")
+        self._Rectangle__height = value

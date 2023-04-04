@@ -2,6 +2,8 @@
 
 # -*- coding: utf-8 -*-
 """ This module contains the rectangle class """
+
+
 class Rectangle:
     """ This is the rectangle class
        Attributes:
@@ -100,6 +102,7 @@ class Rectangle:
             for j in range(0, self.width):
                 print("#", end="")
             print("")
+        return ""
 
     def __str__(self):
         """ This is the __str__ function
@@ -114,3 +117,4 @@ class Rectangle:
             for j in range(0, self.width):
                 print("#", end="")
             print("")
+        return ""

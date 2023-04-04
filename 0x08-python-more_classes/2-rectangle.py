@@ -2,6 +2,8 @@
 
 # -*- coding: utf-8 -*-
 """ This module contains the rectangle class """
+
+
 class Rectangle:
     """ This is the rectangle class
        Attributes:
@@ -66,6 +68,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >=0")
         self.height = value
+
     def area(self):
         """ This is the area function
            Args:
@@ -74,6 +77,7 @@ class Rectangle:
                   nothing
         """
         return self.height * self.width
+
     def perimeter(self):
         """ This is the perimeter function
            Args:
