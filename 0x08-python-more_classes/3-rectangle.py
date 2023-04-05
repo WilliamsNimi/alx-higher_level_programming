@@ -101,5 +101,6 @@ class Rectangle:
         for i in range(0, self.height):
             for j in range(0, self.width):
                 print("#", end="")
-            print("")
+            if i < self.height - 1:
+                print("")
         return ""
