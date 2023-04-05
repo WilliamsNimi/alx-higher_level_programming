@@ -10,8 +10,6 @@ class Rectangle:
                  width: The width of the rectangle
                  height: The height of the rectangle
     """
-    _Rectangle__width = 0
-    _Rectangle__height = 0
 
     def __init__(self, width=0, height=0):
         """ This is the __init__ method
@@ -28,8 +26,8 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if type(height) != int:
             raise TypeError("height must be an integer")
-        self._Rectangle__width = width
-        self._Rectangle__height = height
+        self.height = height
+        self.width = width
 
     def width(self):
         """ This is a getter method for the width of a rectangle
@@ -38,7 +36,7 @@ class Rectangle:
            Return:
                  returns width of the rectangle
         """
-        return self._Rectangle__width
+        return self.__width
 
     def width(self, value):
         """ This is a setter method for the width of a rectangle
@@ -52,7 +50,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self._Rectangle__width = value
+        self.__width = value
 
     def height(self):
         """ This is a getter method for the height of a rectangle
@@ -61,7 +59,7 @@ class Rectangle:
            Return:
                  returns heigth of the rectangle
         """
-        return self._Rectangle__height
+        return self.__height
 
     def height(self, value):
         """ This is a setter method for the height of a rectangle
@@ -75,4 +73,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self._Rectangle__height = value
+        self.__height = value

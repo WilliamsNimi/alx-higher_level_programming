@@ -96,13 +96,7 @@ class Rectangle:
            Return:
                   nothing
         """
-        if self.height == 0 or self.width == 0:
-            return ""
-        for i in range(0, self.height):
-            for j in range(0, self.width):
-                print("#", end="")
-            print("")
-        return ""
+        return "Rectangle({}, {})".format(self.width, self.height)
 
     def __str__(self):
         """ This is the __str__ function

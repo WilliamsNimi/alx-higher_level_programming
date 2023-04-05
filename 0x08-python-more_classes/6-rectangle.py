@@ -5,13 +5,14 @@
 
 
 class Rectangle:
-    """ This is the rectangle class
+    """ This is a rectangle class
        Attributes:
-                  width- this is the width of the rectangle
-                  height-  This is the height of the rectangle
+                  width: this is the width of the rectangle
+                  height: this is the height of the rectangle
     """
     width = 0
     height = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """ This is the __init__ method
@@ -22,6 +23,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def width(self):
         """ This is a getter method for the width of a rectangle
@@ -89,6 +91,15 @@ class Rectangle:
             return 0
         return (2 * self.height) + (2 * self.width)
 
+    def __repr__(self):
+        """ This is the __repr__ function
+           Args:
+                self- This is the instatiation of a class
+           Return:
+                  nothing
+        """
+        return "Rectangle({}, {})".format(self.width, self.height)
+
     def __str__(self):
         """ This is the __str__ function
            Args:
@@ -103,3 +114,13 @@ class Rectangle:
                 print("#", end="")
             print("")
         return ""
+
+    def __del__(self):
+        """ This is the __del__ function
+           Args:
+                self- This is the instantiation of a class
+           Return:
+                 returns nothing
+        """
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
