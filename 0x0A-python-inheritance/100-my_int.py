@@ -6,6 +6,7 @@
 class MyInt(int):
     """ This is the MyInt class """
     ot = None
+
     def __init__(self, ot):
         """ This is the __init__ function """
         self.ot = ot
