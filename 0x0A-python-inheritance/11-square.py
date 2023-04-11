@@ -2,6 +2,8 @@
 
 
 """ This is a BaseGeometry Module """
+
+
 class BaseGeometry:
     """ This is the Base Geometry class """
 
@@ -47,6 +49,7 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    """ This is the Square function """
     _Rectangle__size = None
 
     def __init__(self, size):
