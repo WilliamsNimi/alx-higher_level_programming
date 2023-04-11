@@ -1,0 +1,15 @@
+This is a test document for the MyList class
+>>> MyList = __import__('1-my_list').MyList
+>>> sorted = MyList()
+>>> sorted.append(1)
+>>> sorted.append(20)
+>>> sorted.append(4)
+>>> sorted.print_sorted()
+[1, 4, 20]
+>>> sorted = MyList()
+>>> sorted.append(1)
+>>> sorted.append(20)
+>>> sorted.append(4)
+>>> sorted.append(4)
+>>> sorted.print_sorted()
+[1, 4, 4, 20]
