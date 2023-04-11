@@ -29,6 +29,22 @@ class Rectangle(BaseGeometry):
         self._Rectangle__height = height
         self._Rectangle__width = width
 
+    def area(self):
+        """ This is the area function """
+        return self._Rectangle__height * self._Rectangle__width
+
+    def __repr__(self):
+        """ This is the __repr__ function """
+        width = self._Rectangle__width
+        height = self._Rectangle__height
+        return "[Rectangle] {}/{}".format(width, height)
+
+    def __str__(self):
+        """ This is the __str__ function """
+        width = self._Rectangle__width
+        height = self._Rectangle__height
+        return "[Rectangle] {}/{}".format(width, height)
+
 
 if __name__ == "__main__":
     import doctest
