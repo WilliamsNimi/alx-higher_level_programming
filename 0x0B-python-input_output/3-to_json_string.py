@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """ This is a JSON writer Module """
+import json
 
 
 def to_json_string(my_obj):
