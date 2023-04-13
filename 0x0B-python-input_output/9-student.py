@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """ This is a Student class module """
+import json
 
 
 class Student:
@@ -17,4 +17,4 @@ class Student:
 
     def to_json(self):
         """ This function converts dictionary rep of the class to Json """
-        return json.dumps(vars(self))
+        return json.dumps(self.__dict__)

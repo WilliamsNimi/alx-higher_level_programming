@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """ This is a JSON to file module """
+import json
 
 
 def save_to_json_file(my_obj, filename):

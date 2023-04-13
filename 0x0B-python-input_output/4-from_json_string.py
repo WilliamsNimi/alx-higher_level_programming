@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """ This is a JSON loader module """
+import json
 
 
 def from_json_string(my_str):
