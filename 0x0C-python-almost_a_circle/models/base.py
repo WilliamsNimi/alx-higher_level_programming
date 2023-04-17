@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+""" This is the Base class Module """
+import json
+
+
+class Base:
+    """ This is the Base class """
+    __nb_objects = 0
+
+    def __init__(self, id=None):
+        """ This is the constructor function """
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = self.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """ This function dumps to json """
+        if list_dictionaries is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
+
+    def save_to_file(list_objs):
+        """ Save json to file """
+        name = __class__.__name__
+        with open("{}.json".format(name), mode='w', encoding='UTF8') as file:
+            if list_objs == None:
+                file.write("[]")
+            else:
+                file.write(Base.to_json_string(list_objs))
