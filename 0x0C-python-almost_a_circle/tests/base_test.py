@@ -8,7 +8,7 @@ class TestBase(unittest.TestCase):
 
     def tests_to_json_string(self):
         """ This is the test function for to_json_string function"""
-        pass
+        aelf.assertEqual(type(to_json_string(self.__dict__)), dict)
 
     def tests_save_to_file(self):
         """ This is the test function for save_to_file function """
