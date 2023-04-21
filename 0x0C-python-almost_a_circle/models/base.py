@@ -2,6 +2,7 @@
 """ This is the Base class Module """
 import json
 
+
 class Base:
     """ This is the Base class """
     __nb_objects = 0
@@ -25,7 +26,7 @@ class Base:
         for items in list_objs:
             nme = items.__class__.__name__
             with open("{}.json".format(nme), mode='w', encoding='UTF8') as file:
-                if list_objs == None:
+                if list_objs is None:
                     file.write("[]")
                 else:
                     file.write(Base.to_json_string(items.__dict__))
