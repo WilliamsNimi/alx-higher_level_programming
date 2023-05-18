@@ -1,2 +1,2 @@
 -- Listing the databases in a server
-SELECT * FROM sys.databases;
+SELECT name FROM sys.databases;

@@ -1,2 +1,3 @@
 --Listing tables in a database
-SHOW TABLES in sys.argv[1]
+$db_name = $1;
+SHOW TABLES IN $db_name;
