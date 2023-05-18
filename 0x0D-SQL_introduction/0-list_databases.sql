@@ -1,2 +1,2 @@
 -- Listing the databases in a server
-SELECT name FROM sys.databases;
+SELECT * FROM information_schema.schemata ORDER BY database_name;
