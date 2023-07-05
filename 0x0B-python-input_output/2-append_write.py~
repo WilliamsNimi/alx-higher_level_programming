@@ -1,8 +1,0 @@
-#!/usr/bin/python3
-""" This is a write function """
-
-
-def write_file(filename="", text=""):
-    """ This is a write file function """
-    with open(filename, mode='w', encoding="UTF8") as file:
-        return file.write(text)
