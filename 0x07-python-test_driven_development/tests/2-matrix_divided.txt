@@ -1,0 +1,20 @@
+This is a test document for a function that divides all elements of a matrix.
+>>> matrix = __import__('2-matrix_divided')
+>>> matrix.matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+[[1, 1, 1], [2, 2, 3]]
+>>> matrix.matrix_divided([[1, 2], [4, 5, 6]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+>>> matrix.matrix_divided([[1, 2, 3], [4, 5, 6]], '2')
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+>>> matrix.matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+>>> matrix.matrix_divided([[1, 2, 3], [4, 5, 'g']], 4)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats

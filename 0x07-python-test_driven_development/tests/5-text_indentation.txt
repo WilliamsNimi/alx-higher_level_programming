@@ -1,0 +1,18 @@
+This is a test document for a text indentation function
+>>> text = __import__('5-text_indentation')
+>>> text.text_indentation(5)
+Traceback (most recent call last)
+    ...
+TypeError: text must be a string
+>>> text.text_indentation(5.5)
+Traceback (most recent call last)
+    ...
+TypeError: text must be a string
+>>> text.text_indentation(-1)
+Traceback (most recent call last)
+    ...
+TypeError: text must be a string
+>>> text.text_indentation()
+Traceback (most recent call last)
+    ...
+TypeError: text must be a string
