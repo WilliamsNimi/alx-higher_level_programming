@@ -155,7 +155,4 @@ class Rectangle:
                 size: 
                     The size of the new rectangle
         """
-        cls.width = size
-        cls.height = size
-
-        return Rectangle()
+        return cls(size, size)
