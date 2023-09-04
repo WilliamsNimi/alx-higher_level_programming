@@ -146,6 +146,8 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+    
+    @classmethod
     def square(cls, size=0):
         """This is the square method
             Args:
@@ -155,3 +157,5 @@ class Rectangle:
         """
         cls.width = size
         cls.height = size
+
+        return Rectangle()
