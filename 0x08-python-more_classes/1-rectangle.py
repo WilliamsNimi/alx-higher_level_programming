@@ -18,16 +18,16 @@ class Rectangle:
            Return:
                  returns nothing
         """
-        self.__width = width
-        self.__height = height
-        if self.__width < 0:
+        if width < 0:
             raise ValueError("width must be >= 0")
-        if self.__height < 0:
+        if height < 0:
             raise ValueError("height must be >= 0")
-        if type(self.__width) != int:
+        if type(width) != int:
             raise TypeError("width must be an integer")
-        if type(self.__height) != int:
+        if type(height) != int:
             raise TypeError("height must be an integer")
+        self.__height = height
+        self.__width = width
 
     def width(self):
         """ This is a getter method for the width of a rectangle
