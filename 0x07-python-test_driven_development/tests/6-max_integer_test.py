@@ -9,6 +9,7 @@ class TestMaxInteger(unittest.TestCase):
     def tests_max_integer(self):
         """ This is a test function to test max_integer function """
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([4, 2, 3, 1]), 4)
 
 if __name__ == '__main__':
     unittest.main()
