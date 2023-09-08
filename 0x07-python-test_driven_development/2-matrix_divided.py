@@ -17,7 +17,7 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
         for nums in items:
             if type(nums) == int or type(nums) == float:
-                innerList.append(round((nums / div), 2))
+                innerList.append(round((nums / div), 1))
             else:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         fullList.append(innerList)

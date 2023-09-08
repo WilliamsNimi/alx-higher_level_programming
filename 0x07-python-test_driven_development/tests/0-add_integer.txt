@@ -25,14 +25,14 @@ Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 >>> add.add_integer(1)
-Traceback (most recent call last)
+Traceback (most recent call last):
     ...
 ValueError: Expected two arguments
 >>> add.add_integer()
-Traceback (most recent call last)
+Traceback (most recent call last):
     ...
-ValueError: Expected two arguments
+TypeError: add_integer() missing 1 required positional argument: 'a'
 >>> add.add_integer(1, "NaN")
-Traceback (most recent call last)
+Traceback (most recent call last):
     ...
-ValueError: arguments must be integers
+TypeError: b must be an integer

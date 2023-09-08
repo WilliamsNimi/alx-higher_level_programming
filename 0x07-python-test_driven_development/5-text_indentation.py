@@ -6,12 +6,11 @@ def text_indentation(text):
     if type(text) != str:
         raise TypeError("text must be a string")
     for character in text:
-        if character != " ":
-            if character == '.' or character == '?' or character == ':':
-                print("")
-                print("")
-            if character != '.' and character != '?' and character != ':':
-                print(character, end="")
+        if character == '?' or character == ':':
+            print("")
+            print("")
+        else:
+            print(character, end="")
 
 
 if __name__ == "__main__":
