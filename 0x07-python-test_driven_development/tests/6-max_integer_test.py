@@ -9,29 +9,11 @@ class TestMaxInteger(unittest.TestCase):
     def tests_max_integer(self):
         """ This is a test function to test max_integer function """
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
-    
-    def tests_max_integer(self):
-        """ This is a test function to test max_integer function """
         self.assertEqual(max_integer([4, 2, 3, 1]), 4)
-
-    def tests_max_integer(self):
-        """ This is a test function to test max_integer function """
         self.assertEqual(max_integer([1, 2, 5, 3, 4]), 5)
-
-    def tests_max_integer(self):
-        """ This is a test function to test max_integer function """
         self.assertEqual(max_integer([-1, 2, 5, 3, 4]), 5)
-
-    def tests_max_integer(self):
-        """ This is a test function to test max_integer function """
         self.assertEqual(max_integer([-1, -2, -5, -3, -4]), 5)
-    
-    def tests_max_integer(self):
-        """ This is a test function to test max_integer function """
         self.assertEqual(max_integer([5]), 5)
-
-    def tests_max_integer(self):
-        """ This is a test function to test max_integer function """
         self.assertEqual(max_integer([]), 0)
 
 
