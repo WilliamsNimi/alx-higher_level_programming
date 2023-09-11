@@ -1,0 +1,16 @@
+This is a test document for 7-base_geometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("Name", "12")
+Traceback (most recent call last):
+    ...
+TypeError: Name must be an integer
+>>> bg.integer_validator("Name", 0)
+Traceback (most recent call last):
+    ...
+ValueError: Name must be greater than 0
+>>> bg.integer_validator("Name", -12)
+Traceback (most recent call last):
+    ...
+ValueError: Name must be greater than 0
