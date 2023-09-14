@@ -1,0 +1,51 @@
+#!/usr/bin/python3
+""" This is the square module """
+from models.rectangle import Rectangle
+
+class Square(Rectangle):
+    """ This is the square class """
+
+    def __init__(self, size, x=0, y=0, id=None):
+        """ This is the class constructor """
+        super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        """ This function overrides the __str__ function """
+        id = self.id
+        x = self.x
+        y = self.y
+        size = self.width
+        return "[Square] ({}) {}/{} - {}".format(id, x, y, size)
+
+    @property
+    def size(self):
+        """ This function returns the size of the """
+        return self.width
+
+    @size.setter
+    def size(self, size):
+        """ This is the setter function for the size """
+        self.width = size
+
+    def update(self, *args, **kwargs):
+        """ This is the update function """
+        if len(args) != 0:
+            for i in range(0, len(args)):
+                if i == 0:
+                    self.id = args[0]
+                elif i == 1:
+                    self.width = args[1]
+                elif i == 2:
+                    self.x = args[2]
+                elif i == 3:
+                    self.y = args[3]
+        else:
+            for key, values in kwargs.items():
+                if key == "id":
+                    self.id == values
+                elif key == "size":
+                    self.width = values
+                elif key == "x":
+                    self.x = values
+                elif key == "y":
+                    self.y = values
