@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This is the Base class Module """
 import json
+import csv
 
 
 class Base:
@@ -54,6 +55,26 @@ class Base:
         try:
             with open("{}.json".format(cls.__name__), mode='rw', encoding='UTF8') as file:
                 filesArray = Base.from_json_string(file.read())
+                return [cls.create(**k) for k in filesArray]
+        except IOError:
+            return []
+
+    def save_to_file_csv(cls, list_objs):
+        """ Save CSV to file """
+        for items in list_objs:
+            nme = items.__class__.__name__
+            with open("{}.csv".format(nme), mode='w', encoding='UTF8') as file:
+                writer = csv.writer(file)
+                if list_objs is None:
+                    writer.writerow(["[]"])
+                else:
+                    writer.writerow(items.__dict__)
+    
+    def load_from_file_csv(cls):
+        """ this is the load_from_file function for CSV """
+        try:
+            with open("{}.csv".format(cls.__name__), mode='rw', encoding='UTF8') as file:
+                filesArray = csv.reader(file)
                 return [cls.create(**k) for k in filesArray]
         except IOError:
             return []
