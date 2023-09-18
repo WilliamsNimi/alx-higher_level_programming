@@ -38,11 +38,22 @@ class Base:
             return []
         return json.loads(json_string)
 
-    def create(**dictionary):
+    def create(cls, **dictionary):
         """ This is the create function """
+        if dictionary and len(dictionary) > 0:
+            if cls.__name__ == "Square":
+                obj = cls(1)
+            else:
+                obj = cls(1, 1)
+            obj.update(**dictionary)
+            return obj
         pass
 
-    def load_from_file():
+    def load_from_file(cls):
         """ this is the load_from_file function """
-        with open("{}.json".format(cls), mode='rw', encoding='UTF8') as file:
-            pass
+        try:
+            with open("{}.json".format(cls.__name__), mode='rw', encoding='UTF8') as file:
+                filesArray = Base.from_json_string(file.read())
+                return [cls.create(**k) for k in filesArray]
+        except IOError:
+            return []
