@@ -1,0 +1,2 @@
+-- Inserts a new row to a table
+INSERT INTO sys.argv[1].first_table(id, name) VALUES (89, "Best School");
