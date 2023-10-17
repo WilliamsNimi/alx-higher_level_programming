@@ -18,7 +18,7 @@ class Student:
         """ This function converts dictionary rep of the class to Json """
         obj_dict1 = self.__dict__
         obj_dict = {}
-        if attrs != None:
+        if attrs is not None:
             for items in attrs:
                 if items in obj_dict1:
                     obj_dict[items] = obj_dict1[items]
