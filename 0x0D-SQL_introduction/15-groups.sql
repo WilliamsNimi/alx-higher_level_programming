@@ -1,3 +1,4 @@
 -- Number by score
-SELECT * FROM second_table
+SELECT score AS "score"
+FROM second_table
 GROUP BY score;
