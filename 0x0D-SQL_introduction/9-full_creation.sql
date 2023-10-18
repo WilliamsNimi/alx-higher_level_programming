@@ -1,4 +1,4 @@
---Creates a second_table
+-- Creates a second_table
 CREATE TABLE second_table(
        id INT,
        name VARCHAR(256),
