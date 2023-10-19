@@ -1,3 +1,4 @@
 -- listin cities called california
-SELECT * FROM states WHERE states(name)='California'
-ORDER BY cities(id) ASC;
+SELECT name FROM hbtn_0d_usa.cities
+WHERE states_id=(SELECT id FROM hbtn_0d_usa.states WHERE name = 'California')
+ORDER BY hbtn_0d_usa.cities(id) ASC;
