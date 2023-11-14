@@ -1,6 +1,6 @@
 #!/usr/bin/node
 x = 0;
-if (process.argv.length == 3){
+if (process.argv.length === 3){
     console.log("0");
 }
 else if(process.argv){

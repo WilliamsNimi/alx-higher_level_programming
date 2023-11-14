@@ -1,6 +1,6 @@
 #!/usr/bin/node
 function fact(a){
-    if (a == 1)
+    if (a === 1)
     {
         return 1;
     }
