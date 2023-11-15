@@ -8,8 +8,7 @@ if (process.argv.length === 3) {
       x = process.argv[i];
     }
   }
+  console.log(x);
 } else {
   console.log('0');
 }
-
-console.log(x);

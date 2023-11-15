@@ -1,9 +1,12 @@
 #!/usr/bin/node
 function fact (a) {
+  if (isNaN(a)) {
+    return 1;
+  }
   if (a === 1) {
     return 1;
   }
-  return fact(a - 1) * fact(a - 2);
+  return a * fact(a - 1);
 }
 
 console.log(fact(process.argv[2]));
