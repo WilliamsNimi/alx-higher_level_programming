@@ -1,11 +1,11 @@
 #!/usr/bin/node
 class Square extends Square{
-    constructor(size)
+    constructor (size)
     {
         super(size, size);
     }
 
-    charPrint(c)
+    charPrint (c)
     {
         if (typeof(c) === "undefined")
         {

@@ -1,7 +1,7 @@
 #!/usr/bin/node
-if(typeof(process.argv[2]) === "number"){
-    console.log("My number: "+process.argv[2]);
+if(typeof(process.argv[2]) === 'number'){
+    console.log('My number: '+process.argv[2]);
 }
 else{
-    console.log("Not a number");
+    console.log('Not a number');
 }

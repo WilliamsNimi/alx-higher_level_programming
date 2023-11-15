@@ -1,6 +1,6 @@
 #!/usr/bin/node
 class Rectangle{
-    constructor(w, h)
+    constructor (w, h)
     {
         if (w != 0 && h != 0)
         {
@@ -9,7 +9,7 @@ class Rectangle{
         }   
     }
 
-    print()
+    print ()
     {
         for (let i = 0; i < this.width; i++){
             for (let j = 0; j < this.height; j++)

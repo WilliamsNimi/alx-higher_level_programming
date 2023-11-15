@@ -1,5 +1,6 @@
 #!/usr/bin/node
-function fact(a){
+function fact (a)
+{
     if (a === 1)
     {
         return 1;
