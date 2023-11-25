@@ -4,13 +4,13 @@ import MySQLdb
 import sys
 
 
-def database_access(u, pw, db, search):
+def database_access(u, pw, db, s):
     """
     Accessing the holberton DB via this function
     """
     db = MySQLdb.connect(user=u, passwd=pw, db=db, host="localhost", port=3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(search))
+    cur.execute("SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(s))
     for row in cur.fetchall():
         print(row)
 
