@@ -10,7 +10,7 @@ def database_access(u, pw, db, s):
     """
     db = MySQLdb.connect(user=u, passwd=pw, db=db, host="localhost", port=3306)
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name=%s ORDER BY id ASC",(s, ))
+    c.execute("SELECT * FROM states WHERE name=%s ORDER BY id ASC", (s, ))
     for row in c.fetchall():
         print(row)
 
