@@ -1,6 +1,6 @@
 #!/usr/bin/node
 let squareStr = '';
-if (typeof (parseInt(process.argv[2])) === 'number') {
+if (parseInt(process.argv[2])) {
   for (let i = 0; i < parseInt(process.argv[2]); i++) {
     squareStr += 'X';
   }
