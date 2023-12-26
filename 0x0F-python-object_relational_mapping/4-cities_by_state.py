@@ -13,7 +13,7 @@ def database_access(u, pw, db):
     c.execute("SELECT c.id, c.name, s.name FROM cities c \
 JOIN states s ON c.state_id=s.id ORDER BY id ASC")
     for rows in c.fetchall():
-        print(row)
+        print(rows)
 
 
 if __name__ == "__main__":
